@@ -8,7 +8,7 @@ last_x = points.last[:x]
 SCHEDULER.every '2s' do
   points.shift
   last_x += 1
-  points << { x: last_x, y: rand(50) }
+  points << { x: last_x, y: rand(10) }
 
   send_event('convergence', points: points)
 end
